@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Explicitly welcoming AI crawlers (model training + answer engines)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Blocking ByteDance/TikTok crawler (no opt-in to ByteDance AI training)
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://www.leadrefinery.ai/sitemap.xml

@@ -1,0 +1,188 @@
+# LeadRefinery
+
+> The GTM intelligence tool for MCA brokers. We rank the leads you already paid for and tell your brokers which ones to call first.
+
+LeadRefinery is a lead-scoring and enrichment platform built specifically for Merchant Cash Advance (MCA) brokerages. We take a brokerage's existing lead database — fresh, aged, or forgotten — and run it through a proprietary enrichment pipeline and portfolio of Machine Learning MCA models to identify which records are most likely to be in-market for financing.
+
+We don't sell leads. We don't replace your data providers. We rank what you already own.
+
+---
+
+## The problem we solve
+
+Every MCA brokerage sits on a pile of aged leads and "sunk" costs. Some call them blindly and run email campaigns with limited success. Most watch that pile grow and never give it the attention it deserves.
+
+Brokers waste time on cold lists with no context. They call merchants who aren't in-market, miss merchants who are, and lose deals to competitors with better timing. Customer acquisition costs inflate, the best brokers burn out and leave, and the database — full of paid-for leads — sits dormant.
+
+Your next funded deal is already in your database. You just can't find it — and every week, more leads pile up on top of it.
+
+---
+
+## What LeadRefinery does
+
+We turn the pile you've already paid for into your next funded deals. A four-stage pipeline that takes any list — fresh, aged, or forgotten — and returns ranked intelligence on who to call and who not to call.
+
+### How LeadRefinery works
+
+**Stage 01 — Ingest.** Upload any list. A CSV from your lead aggregator, a CRM export, or an old list you called through seven times. We accept all common formats and connect directly to most CRMs.
+
+**Stage 02 — Enrichment.** We enrich each raw lead via our proprietary enrichment pipeline, applying hundreds of real-world signals and data attributes. We've built the industry's most robust enrichment pipeline because nothing off-the-shelf could tell you who's actually in market.
+
+**Stage 03 — Score.** Every record is scored via our proprietary MCA-trained Machine Learning models and pushed into a priority tier.
+
+**Stage 04 — Deliver.** Records flow back into your CRM, your dialer, or our portal — ranked, so you know who to call and who not to call.
+
+---
+
+## Priority tier output
+
+Every record is strategically placed into one of four priority tiers. Each tier tells a story and indicates how you should activate that lead. Brokerages build new GTM motions around each tier.
+
+### P1 — Call now (high signal)
+Fresh triggers and a narrow window. We feel the merchant could be in-market this week. Get them into your pipeline and label them "hot".
+
+### P2 — Call soon (strong signal · workable)
+Signals support a solid conversation with a merchant. Good for a broker's first half of the day.
+
+### P3 — Warm (moderate signal)
+Workable, but the story is softer. A dial list when the P1–P2 stack runs thin or you are training a Jr. broker or augmenting a call center.
+
+### P4 — Suppress (do not call, but monitor)
+No signals, out of business, or otherwise a lead that does not need any attention. Keeps your brokers off wasted dials.
+
+---
+
+## What every tier unlocks
+
+LeadRefinery is the receipt your brokerage runs on. Each line item maps to a different GTM unlock.
+
+### 01 · Resurrect sunk costs
+Monetize leads you've already paid for. Recapture acquisition spend buried in your existing database — surface ROI from records you already own.
+
+### 02 · Reduce net-new spend
+Acquire less. Convert more. Lean on records you own before paying for another aggregator batch. Same revenue, lower input cost.
+
+### 03 · First to revived files
+Call the leads the industry has written off. Be early on records nobody else is dialing. Less competition on the file when your broker picks up the phone.
+
+### 04 · Amplify broker output
+Ranked intelligence beats grinding lists. Brokers spend the day on signal, not random dials. Output up, broker burnout down, and merchants always stay fresh.
+
+### 05 · Build new GTM sales motions
+The layer under every new GTM motion. Run AI voice agents, BPO call centers, or junior opener teams on ranked intelligence — and grow pipeline without growing overhead.
+
+---
+
+## Who we serve
+
+- **MCA brokerages** — from solo brokers to enterprise floors with 25+ brokers
+- **Brokerage operators** deploying AI voice agents, BPO call centers, or junior opener teams on top of ranked intelligence
+- **Funders** (not brokers) — also welcome
+
+We work with brokerages across all 50 states, with concentration in Florida, New York, Texas, and California. Our scoring is calibrated against 7,000+ historical MCA transactions across industries including restaurants & bars, trucking & transportation, construction, HVAC & plumbing, auto services, retail, healthcare, salons & spas, manufacturing, and professional services.
+
+---
+
+## Pricing
+
+**One row, one price.** Per-row pricing — every scored row priced the exact same. No match, no charge.
+
+What's included:
+- All priority tiers (P1 through P4) included in the base rate
+- Every scored row priced identically — no tier math, no surprise bills
+- Predictable weekly invoice
+- Outcome feedback drives discounts on future runs
+
+What's NOT included:
+- No per-seat fees
+- No platform fees
+- No annual lock-in
+
+The pricing model is simple: you pay for the work we did, nothing else. As you provide outcome feedback (which leads converted, which didn't), volume and signal quality earn you discounts on future batches.
+
+---
+
+## Security and data handling
+
+- **Your data stays yours.** We don't resell, co-mingle, or train external models on broker lists.
+- **Compliance-ready by default.** Built with SOC-2 / GDPR / TCPA-relevant practices.
+- **Never resold, never co-mingled.** Records you upload are isolated to your brokerage.
+
+---
+
+## Glossary of MCA terms
+
+**Aged leads.** Leads in your CRM that are more than 30 days old. Typically discounted or ignored by brokerages, but contain substantial buried value — most have life events between when they were acquired and today.
+
+**Factor rate.** The multiplier used to calculate the total repayment on an MCA. A $50,000 advance at a 1.3 factor rate means $65,000 total repayment.
+
+**ISO (Independent Sales Office).** An MCA broker shop. Sources merchants, packages applications, submits to funders, earns commission.
+
+**MCA (Merchant Cash Advance).** A form of business financing where a merchant sells a portion of future receivables to a funder in exchange for an upfront cash advance.
+
+**P1, P2, P3, P4.** LeadRefinery's priority tier output. P1 = call now (highest signal), P2 = call soon, P3 = warm, P4 = suppress.
+
+**Position (1st, 2nd, 3rd).** Refers to whether an MCA is the first, second, or subsequent advance against the same merchant. Approximately 49% of MCA deals industry-wide are 2nd position or higher, meaning refinance is a major opportunity.
+
+**Pre-screen.** The qualification step where leads are checked for basic fundability (time in business, revenue, industry, state) before enrichment.
+
+**Refinance window.** The optimal time period to re-engage a merchant who has an existing MCA — typically when the existing advance is 65-85% paid down.
+
+**Stack (capital stack).** The set of currently active MCA positions on a merchant. Higher stacks mean more existing daily obligations and typically lower remaining capacity for new funding.
+
+**TIB (Time in Business).** Months or years since the business was formed. Standard MCA underwriting requires 6-12 months minimum.
+
+**UCC filing.** A Uniform Commercial Code filing made by a funder when issuing an MCA. Public-record filings serve as signal for both competition (other funders see the stack) and opportunity (the filing age indicates refinance window).
+
+---
+
+## Frequently asked questions
+
+**What is LeadRefinery?**
+LeadRefinery is a lead-scoring and enrichment platform built for MCA brokerages. We rank the leads you already own — fresh, aged, or forgotten — into priority tiers so your brokers know who to call first, who to call soon, who's warm, and who to suppress.
+
+**Do you sell MCA leads?**
+No. We don't sell leads and we don't replace your existing data providers. We score and rank the leads you already have.
+
+**How are leads scored?**
+Through a proprietary enrichment pipeline that applies hundreds of real-world signals and data attributes, plus a portfolio of Machine Learning models trained specifically on MCA outcomes. Output is a P1-P4 tier classification for each record.
+
+**What's the difference between P1, P2, P3, and P4?**
+P1: Call now (high-signal, in-market this week). P2: Call soon (strong signal, workable). P3: Warm (workable but softer story). P4: Suppress (no signals, out of business, or otherwise no value).
+
+**Can I integrate with my CRM?**
+Yes. We accept CSV uploads and direct CRM connections (Salesforce, HubSpot, and most MCA-specific CRMs). Output is delivered back into your CRM, dialer, or our portal.
+
+**How does pricing work?**
+One price per scored row. Every scored row priced the exact same. No per-seat fees, no platform fees, no annual lock-in. No match means no charge. Outcome feedback and volume earn discounts on future runs.
+
+**Do you work with funders or just brokers?**
+Both. Brokerages are our primary audience, but funders are welcome.
+
+**Is my data safe?**
+Yes. Your data stays yours — we don't resell, co-mingle, or use your records to train external models. We are compliance-ready by default (SOC-2 / GDPR / TCPA practices).
+
+**Can I use LeadRefinery output with AI voice agents or call centers?**
+Yes. This is one of the core use cases. Many brokerages run AI voice agents, BPO call centers, or junior opener teams on top of our ranked intelligence to scale pipeline without scaling overhead.
+
+**How fast is the scoring?**
+Typically hours, not days. Upload a list, get scored output back before your next coffee.
+
+**Where are you based?**
+LeadRefinery LLC is based in Florida, USA. We serve brokerages across all 50 states.
+
+---
+
+## Key links
+
+- **Homepage:** https://www.leadrefinery.ai/
+- **Book a call:** https://calendar.app.google/cXqn1pXcV4Xkb1WH8
+- **Contact:** [Request access form on homepage](https://www.leadrefinery.ai/#pilot)
+
+## Brand identity
+
+- **Legal name:** LeadRefinery LLC
+- **Location:** Florida, USA
+- **Tagline:** The GTM intelligence tool for MCA brokers.
+- **Brand metaphor:** Refinery / distillation — raw leads in, intelligent leads out
+- **Color palette:** Night (#06090F), Cream (#F2EDE3), Amber (#E8A225), Steel (#4A8FAD)

@@ -1,0 +1,29 @@
+# LeadRefinery
+
+> The GTM intelligence tool for MCA brokers. We rank the leads you already paid for and tell your brokers which ones to call first.
+
+LeadRefinery is a lead-scoring and enrichment platform built specifically for Merchant Cash Advance (MCA) brokerages. We take a brokerage's existing lead database — fresh, aged, or forgotten — and run it through a proprietary enrichment pipeline and portfolio of Machine Learning MCA models to identify which records are most likely to be in-market for financing.
+
+## What we do
+
+- One price per scored row. No match, no charge.
+- Four-stage pipeline: Ingest → Enrichment → Score → Deliver
+- Output: ranked priority tiers (P1: Call now, P2: Call soon, P3: Warm, P4: Suppress)
+- Outcome feedback drives discounts on future runs
+- No per-seat fees, no platform fees, no annual lock-in
+- We don't sell leads. We don't replace your data providers. We rank what you already own.
+
+## Who we serve
+
+- MCA brokerages — solo brokers through enterprise floors
+- Brokerage operators deploying AI voice agents, BPO call centers, or junior opener teams on top of ranked intelligence
+- Funders (not brokers) — also welcome
+
+## Key pages
+
+- [Homepage](https://www.leadrefinery.ai/): full product overview, four-stage pipeline explanation, priority-tier breakdown, pricing, and contact form
+
+## Contact
+
+- [Book a 15-minute intro call](https://calendar.app.google/cXqn1pXcV4Xkb1WH8)
+- LeadRefinery LLC · Florida, USA
