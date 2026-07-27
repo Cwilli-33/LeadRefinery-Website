@@ -129,7 +129,7 @@
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#101A2E">The revenue engine for business lending</span>
       </div>
 
-      <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(42px,6.6vw,84px);letter-spacing:-.034em;line-height:1.03">More pipeline than<br>your team can <span style="color:#1F3BE0;box-shadow:inset 0 -.09em 0 #F5A614;transition:opacity .22s ease">{{ heroSwap }}</span>.</h1>
+      <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(42px,6.6vw,84px);letter-spacing:-.034em;line-height:1.03">The leads you already own,<br>turned into <span style="color:#1F3BE0;box-shadow:inset 0 -.09em 0 #F5A614;transition:opacity .22s ease;white-space:nowrap">{{ heroSwap }}</span>.</h1>
 
       <p style="margin-top:26px;max-width:53ch;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A;text-wrap:pretty">Every record you own — dialed, qualified, and dispositioned by AI voice agents. Your closers only touch the ones worth <span style="white-space:nowrap">closing.</span></p>
 
@@ -1801,7 +1801,7 @@ class Component extends DCLogic {
         const list = ['MCA funders','Equipment lessors','SBA lenders','Working-capital providers','Line-of-credit lenders','Broker shops','Revenue-based finance'];
         return list.concat(list).map(v => ({ v }));
       })(),
-      heroSwap: ['call', 'work', 'qualify', 'reach'][this.state.heroWord % 4],
+      heroSwap: ['submissions', 'live transfers', 'applications'][this.state.heroWord % 3],
       agentName: pool.agent,
       reach: pool.reach,
       total: pool.total,
