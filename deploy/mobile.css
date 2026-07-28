@@ -1,95 +1,26 @@
 /* ============================================================
-   mobile.css — owns ALL mobile (≤760px) adaptations for the site.
+   mobile.css — mobile (≤760px) adaptations layered on top of the
+   Claude Design export.
 
    WHY THIS FILE EXISTS:
    The site is exported from Claude Design as a single index.html.
-   Keeping mobile tweaks in here (a separate file) means re-exporting
-   the DESKTOP design never wipes the mobile work. After uploading a
-   new index.html, just make sure its <head> still contains:
+   Keeping mobile tweaks here means re-exporting the DESKTOP design
+   never wipes them. After uploading a new index.html, just make sure
+   its <head> still contains:
        <link rel="stylesheet" href="mobile.css">
+
+   The current design is already responsive on its own (it collapses
+   its grids on small screens), so the only override needed right now
+   is trimming the hero headline so the call-to-action stays above the
+   fold. If future design changes reintroduce a wide table or other
+   mobile issue, add scoped @media rules below.
    ============================================================ */
 
 @media (max-width: 760px) {
 
-  /* ---- HERO: smaller headline so the CTA sits above the fold ---- */
+  /* Hero: smaller headline so the CTA sits above the fold on phones */
   #hero h1 {
     font-size: clamp(32px, 9vw, 44px) !important;
   }
 
-  /* ---- COMPARISON: turn the wide 4-column table into stacked
-         per-row cards, so nothing needs a sideways swipe ---- */
-  #compare table { min-width: 0 !important; width: 100% !important; }
-  #compare table,
-  #compare tbody,
-  #compare tr,
-  #compare td { display: block !important; width: auto !important; }
-  #compare thead { display: none !important; }
-
-  #compare tbody tr {
-    background: #FFFFFF !important;
-    border: 1px solid #E2DBCD !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-    margin-bottom: 12px !important;
-  }
-
-  #compare td {
-    border: 0 !important;
-    padding: 0 !important;
-    white-space: normal !important;
-  }
-
-  /* first cell = the row label, styled as a card header */
-  #compare td:nth-child(1) {
-    font-family: 'Bricolage Grotesque', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 15px !important;
-    letter-spacing: -0.014em !important;
-    color: #101A2E !important;
-    background: #FBF8F2 !important;
-    border-bottom: 1px solid #E2DBCD !important;
-    padding: 12px 15px !important;
-  }
-
-  /* value cells: a mono label (::before) + the value */
-  #compare td:nth-child(2),
-  #compare td:nth-child(3),
-  #compare td:nth-child(4) {
-    display: grid !important;
-    grid-template-columns: 116px 1fr !important;
-    gap: 12px !important;
-    align-items: baseline !important;
-    padding: 11px 15px !important;
-    font-size: 14px !important;
-    color: #34405A !important;
-    line-height: 1.4 !important;
-  }
-
-  #compare td:nth-child(2)::before,
-  #compare td:nth-child(3)::before,
-  #compare td:nth-child(4)::before {
-    font-family: 'JetBrains Mono', monospace !important;
-    font-size: 9px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.1em !important;
-    text-transform: uppercase !important;
-    color: #6E7C93;
-  }
-  #compare td:nth-child(2)::before { content: "Calling floor"; }
-  #compare td:nth-child(3)::before { content: "Predictive dialer"; }
-  #compare td:nth-child(4)::before { content: "LeadRefinery"; color: #8A6410 !important; }
-
-  /* highlight the LeadRefinery row */
-  #compare td:nth-child(4) {
-    background: rgba(245, 166, 20, 0.12) !important;
-    border-top: 1px solid rgba(245, 166, 20, 0.4) !important;
-    color: #101A2E !important;
-    font-weight: 600 !important;
-  }
-
-  /* ---- CONSOLE: collapse the 4-column disposition rows to a
-         tidy 2-column (2×2) layout instead of a cramped squeeze ---- */
-  #console [style*="1.5fr"] {
-    grid-template-columns: 1fr auto !important;
-  }
 }

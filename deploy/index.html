@@ -101,12 +101,8 @@
       <sc-if value="{{ ddOpen }}" hint-placeholder-val="{{ false }}">
         <div style="position:absolute;top:calc(100% + 10px);right:0;width:320px;background:#FFFFFF;border:1px solid #E2DBCD;border-radius:12px;box-shadow:0 28px 60px -30px rgba(16,26,46,.55);overflow:hidden;z-index:80">
           <sc-for list="{{ ddPages }}" as="pg" hint-placeholder-count="5">
-            <a href="#" onClick="{{ pg.go }}" style="display:grid;grid-template-columns:auto 1fr;gap:12px;padding:13px 16px;border-bottom:1px solid #F4F0E8;background:{{ pg.bg }};color:#101A2E" style-hover="background:#FBF8F2;color:#101A2E">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.14em;color:{{ pg.no }};padding-top:3px">{{ pg.idx }}</span>
-              <span>
-                <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.014em">{{ pg.label }}</span>
-                <span style="display:block;margin-top:3px;font-size:13px;color:#34405A;line-height:1.45">{{ pg.desc }}</span>
-              </span>
+            <a href="#" onClick="{{ pg.go }}" style="display:block;padding:13px 16px;border-bottom:1px solid #F4F0E8;background:{{ pg.bg }};color:#101A2E" style-hover="background:#FBF8F2;color:#101A2E">
+              <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.014em">{{ pg.label }}</span>
             </a>
           </sc-for>
         </div>
@@ -132,9 +128,9 @@
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#101A2E">The revenue engine for business lending</span>
       </div>
 
-      <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(42px,6.6vw,84px);letter-spacing:-.034em;line-height:1.03">The leads you already own,<br>turned into <span style="color:#1F3BE0;box-shadow:inset 0 -.09em 0 #F5A614;transition:opacity .22s ease;white-space:nowrap">{{ heroSwap }}</span>.</h1>
+      <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(42px,6.6vw,84px);letter-spacing:-.034em;line-height:1.03">The leads you<br>already own, turned<br>into <a href="#package" onClick="{{ fx.pkg }}" style="color:#1F3BE0;box-shadow:inset 0 -.09em 0 #F5A614;transition:opacity .22s ease,box-shadow .22s ease" style-hover="box-shadow:inset 0 -.32em 0 #F5A614">{{ heroSwap }}</a>.</h1>
 
-      <p style="margin-top:26px;max-width:53ch;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A;text-wrap:pretty">Every record you own — dialed, qualified, and dispositioned by AI voice agents. Your closers only touch the ones worth <span style="white-space:nowrap">closing.</span></p>
+      <p style="margin-top:26px;max-width:53ch;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A;text-wrap:pretty">AI voice agents dial any lead in your CRM, qualify on a real conversation, and hand your closers a warm transfer or a completed <span style="white-space:nowrap">application.</span></p>
 
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:34px">
         <a href="https://calendar.app.google/3RGeXGeboEWwX4XZ9" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#101A2E;color:#FBF8F2;font-weight:600;font-size:15px;padding:14px 22px;border-radius:8px" style-hover="color:#FBF8F2;transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(16,26,46,.75)">Book an intro call <span>→</span></a>
@@ -164,13 +160,12 @@
   <div data-rv="{{ rv.problem }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
     <div style="display:grid;grid-template-columns:{{ splitCols }};gap:{{ gapLg }};align-items:start">
       <div>
-        <p style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(26px,3.5vw,44px);line-height:1.1;max-width:22ch">The revenue is already in your CRM. The <span style="color:#F5A614">capacity to call it</span> isn't.</p>
-        <p style="margin-top:26px;max-width:44ch;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#B9C3D6">You're sitting on thousands of records that would fund if somebody worked them. The borrower who said no in March is a different borrower in September — a position paid down, a lien released, a season turned. None of it shows up in your CRM.</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(26px,3.5vw,44px);line-height:1.1;max-width:22ch">The revenue is already in your CRM. We add the <span style="color:#F5A614">capacity to work all of it</span>.</p>
+        <p style="margin-top:26px;max-width:44ch;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#B9C3D6">Thousands of leads in your CRM would fund if somebody worked them persistently. The borrower who said no in March is a different borrower in September — a position paid down, a lien released, a season turned. None of it shows up in your CRM.</p>
         <p style="margin-top:20px;max-width:44ch;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#B9C3D6">Working that data means turning over every stone — headcount, grit, and the discipline to keep dialing a list that mostly says no. Your reps would rather chase this week's hot leads. So it sits.</p>
-        <p style="margin-top:20px;max-width:44ch;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#B9C3D6">Every stone still needs turning. It just doesn't need a person to turn it.</p>
       </div>
       <div>
-      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F5A614;margin-bottom:14px">One record in your CRM</span>
+      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F5A614;margin-bottom:14px">One lead in your CRM</span>
       <div style="border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden">
         <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:15px 22px;background:#0C1526;border-bottom:1px solid rgba(255,255,255,.14)">
           <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;letter-spacing:-.016em;color:#FBF8F2">Redline Freight LLC</span>
@@ -231,7 +226,7 @@
   <div data-rv="{{ rv.pipeline }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
     <div style="max-width:62ch;margin:0 auto clamp(36px,4vw,56px);text-align:center">
       <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">Your revenue engine.</h2>
-      <p style="margin:18px auto 0;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">You hand us a list. We make every dial on it. Back comes a warm transfer, an application already out, and a record that knows more than it did this morning. Two touchpoints for your team: the list out, the close in.</p>
+      <p style="margin:18px auto 0;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">You provide the leads. We make the dials. What comes back is a warm transfer or a completed application — and two touchpoints for your team: the list out, the close in.</p>
     </div>
 
 <div style="display:{{ wheelShow }};max-width:1000px;margin:0 auto">
@@ -253,7 +248,7 @@
         <div style="position:relative;z-index:1;background:#FFFFFF;border:1px solid #E2DBCD;border-radius:12px;padding:19px 20px 21px;box-shadow:0 18px 36px -30px rgba(16,26,46,.6);grid-column:1;text-align:left">
           <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px;color:#6E7C93">Leads in</span>
           <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.016em;line-height:1.16;color:#101A2E">Leads uploaded or ingested</span>
-          <span style="display:block;margin-top:7px;font-size:14px;line-height:1.5;color:#34405A">Drop a file, or push records straight from your CRM.</span>
+          <span style="display:block;margin-top:7px;font-size:14px;line-height:1.5;color:#34405A">Drop a file, or push leads straight from your CRM.</span>
         </div>
         <div style="grid-column:2;position:relative;display:flex;align-items:center;justify-content:center">
           <span style="position:absolute;top:50%;left:-26px;right:-26px;height:2px;background:#F5A614;transform:translateY(-50%)" aria-hidden="true"></span>
@@ -269,7 +264,7 @@
         <div style="position:relative;z-index:1;background:#18243D;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:19px 20px 21px;box-shadow:0 14px 30px -26px rgba(0,0,0,.7);grid-column:3;text-align:left">
           <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px;color:#F5A614">Dial</span>
           <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.016em;line-height:1.16;color:#FBF8F2">Active sales queue</span>
-          <span style="display:block;margin-top:7px;font-size:14px;line-height:1.5;color:#A9B5CB">Cleared records get worked on cadence — retries and callbacks included.</span>
+          <span style="display:block;margin-top:7px;font-size:14px;line-height:1.5;color:#A9B5CB">Cleared leads get worked on cadence — retries and callbacks included.</span>
         </div>
         <div style="position:relative;z-index:1;background:#FFF9EC;border:1px solid rgba(245,166,20,.5);border-radius:12px;padding:19px 20px 21px;box-shadow:0 18px 36px -30px rgba(16,26,46,.6);grid-column:1;text-align:left">
           <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px;color:#8A6410">Your rep picks up</span>
@@ -306,7 +301,7 @@
       <div style="background:#FFFFFF;padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;transition:background .25s" style-hover="background:#FDFBF6">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;color:#F5A614">LEADS IN</span>
         <b style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.018em;color:#101A2E">Leads uploaded or ingested</b>
-        <span style="font-size:15px;line-height:1.6;color:#34405A">Drop a file, or push records straight from your CRM.</span>
+        <span style="font-size:15px;line-height:1.6;color:#34405A">Drop a file, or push leads straight from your CRM.</span>
       </div>
       <div style="background:#FFFFFF;padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;transition:background .25s" style-hover="background:#FDFBF6">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;color:#F5A614">SCRUB</span>
@@ -316,7 +311,7 @@
       <div style="background:#FFFFFF;padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;transition:background .25s" style-hover="background:#FDFBF6">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;color:#F5A614">DIAL</span>
         <b style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.018em;color:#101A2E">Active sales queue</b>
-        <span style="font-size:15px;line-height:1.6;color:#34405A">Cleared records get worked on cadence — retries and callbacks included.</span>
+        <span style="font-size:15px;line-height:1.6;color:#34405A">Cleared leads get worked on cadence — retries and callbacks included.</span>
       </div>
       <div style="background:#FFFFFF;padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;transition:background .25s" style-hover="background:#FDFBF6">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;color:#00A57E">CONVERT</span>
@@ -377,7 +372,7 @@
 <section id="agents" style="padding:{{ secPad }};scroll-margin-top:70px;position:relative;overflow:hidden">
   <div data-rv="{{ rv.agents }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
     <div style="max-width:62ch;margin-bottom:clamp(36px,4vw,56px)">
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03;max-width:30ch;text-wrap:balance">An agent for every list you aren't calling.</h2>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03;max-width:30ch;text-wrap:balance">A voice agent for every lead type.</h2>
       <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">Same infrastructure stack and technology. Each one is tuned to a different lead source — a nine-month-old decline is not the same conversation as a renewal.</p>
     </div>
 
@@ -417,7 +412,7 @@
 <section id="package" style="padding:{{ secPad }};scroll-margin-top:70px;position:relative;overflow:hidden">
   <div data-rv="{{ rv.package }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
     <div style="max-width:62ch;margin-bottom:clamp(36px,4vw,56px)">
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">A warm merchant, a full file, nothing left to guess.</h2>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">A qualified merchant, and the file behind them.</h2>
       <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">You already have too many names and numbers. Your rep inherits a merchant who just raised their hand — and the file that proves it.</p>
     </div>
     <div style="display:grid;grid-template-columns:{{ threeCols }};gap:1px;background:#E2DBCD;border:1px solid #E2DBCD;border-radius:14px;overflow:hidden">
@@ -433,63 +428,21 @@
       </sc-for>
     </div>
 
-    <div style="margin-top:26px;background:#101A2E;border-radius:14px;padding:26px 26px 28px;display:grid;grid-template-columns:{{ splitCols }};gap:18px 32px;align-items:start">
+    <div style="margin-top:26px;background:#FFF9EC;border:1px solid rgba(245,166,20,.5);border-radius:14px;padding:26px 28px 28px;display:grid;grid-template-columns:{{ splitCols }};gap:18px 32px;align-items:center">
       <div>
-        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F5A614;margin-bottom:10px">On the roadmap</span>
-        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(20px,2.2vw,27px);letter-spacing:-.022em;line-height:1.14;color:#FBF8F2;max-width:24ch">Funder routing, learned from your own network.</b>
+        <span style="display:flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8A6410;margin-bottom:10px"><i style="width:7px;height:7px;border-radius:50%;background:#00A57E;flex:none;animation:lrRing 2.4s ease-out infinite"></i>Or skip the file entirely</span>
+        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(20px,2.2vw,27px);letter-spacing:-.022em;line-height:1.14;color:#101A2E;max-width:26ch;text-wrap:balance">Live transfer — merchant still on the line.</b>
       </div>
-      <p style="font-size:15px;line-height:1.6;color:#B9C3D6;max-width:56ch">As volume builds, the system learns which funders buy which paper from you — stack shape, revenue band, industry, time in business — and routes each application to the right desk instead of a manual decision.</p>
+      <div>
+        <p style="font-size:15px;line-height:1.6;color:#34405A;max-width:56ch;margin:0">When a merchant qualifies and wants to talk now, the agent warm-transfers the call to your broker with the call context already attached. Your closer picks up mid-conversation, not cold — they can see everything the agent captured before they say hello.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
 
 
-<!-- ==================== COMPARISON ==================== -->
-<section id="compare" style="background:linear-gradient(180deg,rgba(251,248,242,1) 0%,rgba(251,248,242,0.985) 8%,rgba(251,248,242,0.95) 18%,rgba(251,248,242,0.89) 28%,rgba(251,248,242,0.8) 38%,rgba(251,248,242,0.68) 48%,rgba(251,248,242,0.55) 58%,rgba(251,248,242,0.41) 68%,rgba(251,248,242,0.28) 78%,rgba(251,248,242,0.17) 86%,rgba(251,248,242,0.08) 93%,rgba(251,248,242,0.03) 97%,rgba(251,248,242,0) 100%) top/100% 240px no-repeat, #F2ECE1;padding:clamp(120px,13vw,180px) 0 {{ secPadBase }};scroll-margin-top:70px;position:relative;overflow:hidden">
-  <div data-rv="{{ rv.compare }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
-    <div style="max-width:62ch;margin-bottom:clamp(36px,4vw,56px)">
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">Three ways to work the same list.</h2>
-      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">The difference isn't dial speed — it's who does the work. A dialer is a tool your reps operate. This is the labor: it holds the conversation, decides who's worth your rep's time, captures the documents, hands over a finished file.</p>
-    </div>
-
-    <div style="background:#FFFFFF;border:1px solid #E2DBCD;border-radius:14px;overflow:hidden">
-      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-        <table style="width:100%;border-collapse:collapse;min-width:900px">
-          <thead>
-            <tr>
-              <th style="text-align:left;padding:15px 20px;border-bottom:1px solid #E2DBCD;background:#FBF8F2;width:24%"></th>
-              <th style="text-align:left;padding:15px 20px;border-bottom:1px solid #E2DBCD;background:#FBF8F2;vertical-align:top">
-                <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#6E7C93;font-weight:500">Today</span>
-                <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;letter-spacing:-.015em;color:#101A2E;margin-top:5px">Your calling floor</b>
-              </th>
-              <th style="text-align:left;padding:15px 20px;border-bottom:1px solid #E2DBCD;background:#FBF8F2;vertical-align:top">
-                <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#6E7C93;font-weight:500">Today</span>
-                <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;letter-spacing:-.015em;color:#101A2E;margin-top:5px">Predictive dialer</b>
-              </th>
-              <th style="text-align:left;padding:15px 20px;border-bottom:1px solid rgba(245,166,20,.45);background:rgba(245,166,20,.22);vertical-align:top">
-                <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#B0821E;font-weight:500">The engine</span>
-                <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;letter-spacing:-.015em;color:#8A6410;margin-top:5px">LeadRefinery</b>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <sc-for list="{{ compare }}" as="c" hint-placeholder-count="7">
-              <tr>
-                <td style="text-align:left;padding:15px 20px;border-bottom:1px solid #F4F0E8;vertical-align:top;font-size:14.5px;font-weight:600;color:#101A2E;line-height:1.5;white-space:nowrap">{{ c.lbl }}</td>
-                <td style="text-align:left;padding:15px 20px;border-bottom:1px solid #F4F0E8;vertical-align:top;font-size:14.5px;color:#34405A;line-height:1.5;white-space:nowrap">{{ c.floor }}</td>
-                <td style="text-align:left;padding:15px 20px;border-bottom:1px solid #F4F0E8;vertical-align:top;font-size:14.5px;color:#34405A;line-height:1.5;white-space:nowrap">{{ c.dialer }}</td>
-                <td style="text-align:left;padding:15px 20px;border-bottom:1px solid #F4F0E8;vertical-align:top;font-size:14.5px;color:#101A2E;font-weight:500;line-height:1.5;background:rgba(245,166,20,.10);border-left:1px solid rgba(245,166,20,.35);border-right:1px solid rgba(245,166,20,.35);white-space:nowrap">{{ c.us }}</td>
-              </tr>
-            </sc-for>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <p style="margin-top:24px;font-size:15.5px;color:#34405A;max-width:70ch"><b style="color:#101A2E;font-weight:600">The honest version:</b> this doesn't replace your closers, it protects their hours. It takes the first touch — dialing, machines, qualification, the document chase, the CRM entry — so the people you pay to close only sit in conversations worth closing.</p>
-  </div>
-</section>
 
 
 
@@ -507,22 +460,22 @@
   <div data-rv="{{ rv.compliance }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
     <div style="max-width:62ch;margin-bottom:clamp(36px,4vw,56px)">
       <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03;color:#FBF8F2;text-wrap:balance">Guardrails first. Volume second.</h2>
-      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#B9C3D6;text-wrap:pretty">Consent, DNC, calling windows, disclosures, retry caps, machine detection — all of it is hard-coded below the agent, not configured per campaign. The agent can't operate outside it. Anything that fails a check is stopped, not queued.</p>
+      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#B9C3D6;text-wrap:pretty">Consent, DNC, calling windows, disclosures, retry caps, machine detection — all of it is hard-coded, not configured per campaign. The agent can't operate outside it. Anything that fails a check is stopped, not queued.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:{{ twoCols }};gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden;margin-bottom:40px">
       <sc-for list="{{ controls }}" as="c" hint-placeholder-count="8">
         <div style="background:#101A2E;padding:22px 24px 24px;transition:background .25s, box-shadow .25s" style-hover="background:#152449;box-shadow:inset 0 0 0 1px rgba(31,59,224,.55), 0 12px 32px -14px rgba(245,166,20,.5)">
-          <b style="display:block;font-size:15.5px;font-weight:600;color:#FBF8F2;letter-spacing:-.008em;margin-bottom:8px">{{ c.t }}</b>
-          <span style="display:block;font-size:14px;color:#93A0BA;line-height:1.55">{{ c.d }}</span>
+          <b style="display:block;font-size:17px;font-weight:600;color:#FBF8F2;letter-spacing:-.01em;margin-bottom:9px">{{ c.t }}</b>
+          <span style="display:block;font-size:15px;color:#A9B5CB;line-height:1.6">{{ c.d }}</span>
         </div>
       </sc-for>
     </div>
 
     <div style="border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14);padding:16px 0;overflow:hidden" aria-hidden="true">
-      <div style="display:flex;gap:44px;width:max-content;animation:lrSlide 38s linear infinite">
+      <div style="display:flex;gap:30px;width:max-content;animation:lrSlide 46s linear infinite" style-hover="animation-play-state:paused">
         <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="10">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#93A0BA;white-space:nowrap;display:flex;align-items:center;gap:10px"><i style="width:6px;height:6px;background:#00A57E;border-radius:50%;flex:none"></i>{{ m.v }}</span>
+          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.014em;color:#93A0BA;white-space:nowrap;display:flex;align-items:center;gap:11px"><i style="width:6px;height:6px;background:#00A57E;border-radius:50%;flex:none"></i>{{ m.v }}</span>
         </sc-for>
       </div>
     </div>
@@ -539,7 +492,7 @@
   <div data-rv="{{ rv.runtime }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
     <div style="max-width:62ch;margin-bottom:clamp(36px,4vw,56px)">
       <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03;color:#FBF8F2">We own every layer that touches the call.</h2>
-      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#B9C3D6">Carrier routing, the conversation runtime, the lending model, the policy engine. Each one is ours because each one decides whether a regulated dial connects, qualifies, and holds up under audit — and none of that can be tuned from behind someone else's API.</p>
+      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#B9C3D6">How the call is placed, how the agent talks, what it asks about, and the rules it cannot break. Each one is ours, because each one decides whether a call connects, qualifies, and holds up under audit.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:{{ stackCols }};gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden">
@@ -571,8 +524,8 @@
 <section id="console" style="padding:{{ secPad }};scroll-margin-top:70px;position:relative;overflow:hidden">
   <div style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
     <div style="max-width:62ch;margin-bottom:clamp(32px,4vw,48px)">
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">A console, not a black box.</h2>
-      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">You watch it run. Campaigns, the live queue, every recording and transcript — plus what comes out of thousands of conversations your floor was never going to have.</p>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">Every dial, in one console.</h2>
+      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">Outcomes, hot leads waiting on a human, live calls you can listen in on or step into, and every transcript and document behind them. Or never log in at all — everything writes back to your CRM, which stays the system of record.</p>
     </div>
 
     <div style="border:1px solid #E2DBCD;border-radius:14px;overflow:hidden;background:#FFFFFF;box-shadow:0 40px 70px -52px rgba(16,26,46,.55)">
@@ -585,68 +538,108 @@
       <div style="display:grid;grid-template-columns:{{ consoleCols }}">
         <div style="background:#101A2E;padding:18px 14px;display:flex;flex-direction:column;gap:4px">
           <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F5A614;padding:0 10px 10px">Coast Capital</span>
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;padding:8px 10px;border-radius:6px;color:#FBF8F2;background:rgba(255,255,255,.10)">Campaigns</span>
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;padding:8px 10px;border-radius:6px;color:#93A0BA;background:transparent">Live queue</span>
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;padding:8px 10px;border-radius:6px;color:#93A0BA;background:transparent">Call review</span>
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;padding:8px 10px;border-radius:6px;color:#93A0BA;background:transparent">Insights</span>
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;padding:8px 10px;border-radius:6px;color:#93A0BA;background:transparent">Compliance log</span>
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;padding:8px 10px;border-radius:6px;color:#93A0BA;background:transparent">Integrations</span>
+          <sc-for list="{{ demoNav }}" as="n" hint-placeholder-count="7">
+            <span style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;padding:8px 10px;border-radius:6px;transition:background .3s ease,color .3s ease;color:{{ n.fg }};background:{{ n.bg }}">{{ n.label }}<i style="font-size:9px;font-weight:700;color:#F5A614;margin-left:auto;font-style:normal;display:{{ n.badgeShow }}">{{ n.badge }}</i></span>
+          </sc-for>
         </div>
-        <div style="padding:18px">
+
+        <div style="padding:18px;min-height:352px;display:flex;flex-direction:column">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:16px">
-            <b style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.018em;color:#101A2E">Aged files · Q3 recovery</b>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#00654E;background:rgba(0,165,126,.12);border:1px solid rgba(0,165,126,.45);border-radius:5px;padding:4px 9px">Running</span>
-            <span style="margin-left:auto;display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;color:#6E7C93"><span style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A6410;background:#FFF1D6;border:1px solid #EBD9B4;border-radius:5px;padding:3px 7px">Illustrative</span>Last 30 days</span>
+            <b style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.018em;color:#101A2E">{{ demoTitle }}</b>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:5px;padding:4px 9px;background:{{ demoPillBg }};color:{{ demoPillFg }};border:1px solid {{ demoPillBd }}">{{ demoPill }}</span>
+            <span style="margin-left:auto;display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;color:#6E7C93"><span style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A6410;background:#FFF1D6;border:1px solid #EBD9B4;border-radius:5px;padding:3px 7px">Illustrative</span>{{ demoMeta }}</span>
           </div>
-          <div style="display:grid;grid-template-columns:{{ tileCols }};gap:10px;margin-bottom:16px">
-            <div style="background:#FBF8F2;border:1px solid #E2DBCD;border-radius:9px;padding:13px 14px 14px">
-              <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Records worked</span>
-              <b style="display:block;margin-top:7px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:23px;letter-spacing:-.03em;color:#101A2E">12,480</b>
+
+          <sc-if value="{{ demoIsDash }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <div style="display:grid;grid-template-columns:{{ tileCols }};gap:10px;margin-bottom:14px">
+              <sc-for list="{{ demoTiles }}" as="t" hint-placeholder-count="4">
+                <div style="background:#FBF8F2;border:1px solid #E2DBCD;border-radius:9px;padding:12px 13px 13px">
+                  <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">{{ t.k }}</span>
+                  <b style="display:block;margin-top:7px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.03em;color:{{ t.fg }}">{{ t.v }}</b>
+                </div>
+              </sc-for>
             </div>
-            <div style="background:#FBF8F2;border:1px solid #E2DBCD;border-radius:9px;padding:13px 14px 14px">
-              <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Contact rate</span>
-              <b style="display:block;margin-top:7px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:23px;letter-spacing:-.03em;color:#101A2E">31%</b>
-            </div>
-            <div style="background:#FBF8F2;border:1px solid #E2DBCD;border-radius:9px;padding:13px 14px 14px">
-              <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Applications out</span>
-              <b style="display:block;margin-top:7px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:23px;letter-spacing:-.03em;color:#8A6410">214</b>
-            </div>
-            <div style="background:#FBF8F2;border:1px solid #E2DBCD;border-radius:9px;padding:13px 14px 14px">
-              <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Live transfers</span>
-              <b style="display:block;margin-top:7px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:23px;letter-spacing:-.03em;color:#00654E">96</b>
+            <div style="border:1px solid #E2DBCD;border-radius:10px;padding:14px 15px 12px">
+              <span style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Outcomes delivered</span>
+                <span style="margin-left:auto;display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:#6E7C93"><i style="width:7px;height:7px;border-radius:2px;background:#F5A614"></i>Transfers</span>
+                <span style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:#6E7C93"><i style="width:7px;height:7px;border-radius:2px;background:#101A2E"></i>Applications</span>
+              </span>
+              <span style="display:flex;align-items:flex-end;gap:5px;height:120px">
+                <sc-for list="{{ demoBars }}" as="b" hint-placeholder-count="14">
+                  <span style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;height:100%">
+                    <span style="display:block;background:#101A2E;border-radius:3px 3px 0 0;height:{{ b.a }}"></span>
+                    <span style="display:block;background:#F5A614;border-radius:0 0 3px 3px;height:{{ b.t }}"></span>
+                  </span>
+                </sc-for>
+              </span>
             </div>
           </div>
+          </sc-if>
+
+          <sc-if value="{{ demoIsHot }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <sc-for list="{{ demoHot }}" as="h" hint-placeholder-count="4">
+              <div style="border:1px solid #E2DBCD;border-radius:10px;padding:13px 15px;display:grid;grid-template-columns:{{ hotCols }};gap:8px 16px;align-items:center">
+                <span style="min-width:0">
+                  <span style="display:flex;align-items:center;gap:8px">
+                    <b style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:-.014em;color:#101A2E">{{ h.name }}</b>
+                    <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.1em;color:{{ h.heatFg }}">{{ h.heat }}</span>
+                  </span>
+                  <span style="display:block;margin-top:4px;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#93A0BA">{{ h.meta }}</span>
+                </span>
+                <span style="font-size:12.5px;line-height:1.45;color:#34405A;font-style:italic;min-width:0">{{ h.quote }}</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:6px 10px;white-space:nowrap;background:#F5A614;color:#101A2E">Call now</span>
+              </div>
+            </sc-for>
+          </div>
+          </sc-if>
+
+          <sc-if value="{{ demoIsLive }}" hint-placeholder-val="{{ false }}">
           <div style="border:1px solid #E2DBCD;border-radius:10px;overflow:hidden">
-            <div style="display:grid;grid-template-columns:1.5fr .9fr .5fr 1fr;gap:12px;padding:10px 14px;background:#FBF8F2">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Merchant</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Outcome</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Length</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6E7C93">Written back</span>
+            <div style="background:#101A2E;padding:13px 15px;display:flex;align-items:center;gap:11px">
+              <i style="width:8px;height:8px;border-radius:50%;background:#00A57E;animation:lrRing 1.6s ease-out infinite;flex:none"></i>
+              <b style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:-.014em;color:#FBF8F2">Ironwood Cabinetry</b>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#93A0BA">2:14</span>
+              <span style="margin-left:auto;display:flex;align-items:flex-end;gap:2px;height:20px">
+                <sc-for list="{{ demoWave }}" as="w" hint-placeholder-count="26">
+                  <i style="width:2px;border-radius:1px;background:rgba(245,166,20,.9);height:{{ w.h }}"></i>
+                </sc-for>
+              </span>
             </div>
-            <div style="display:grid;grid-template-columns:1.5fr .9fr .5fr 1fr;gap:12px;align-items:center;padding:11px 14px;border-top:1px solid #F4F0E8">
-              <span style="font-size:13.5px;font-weight:600;color:#101A2E">Redline Freight LLC</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A6410;background:rgba(245,166,20,.16);border-radius:5px;padding:4px 8px;justify-self:start">App out</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6E7C93">4:12</span>
-              <span style="font-size:13px;color:#34405A">Application, transcript</span>
-            </div>
-            <div style="display:grid;grid-template-columns:1.5fr .9fr .5fr 1fr;gap:12px;align-items:center;padding:11px 14px;border-top:1px solid #F4F0E8">
-              <span style="font-size:13.5px;font-weight:600;color:#101A2E">Harbor Point Dental</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#00654E;background:rgba(0,165,126,.12);border-radius:5px;padding:4px 8px;justify-self:start">Transferred</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6E7C93">2:38</span>
-              <span style="font-size:13px;color:#34405A">Package, recording</span>
-            </div>
-            <div style="display:grid;grid-template-columns:1.5fr .9fr .5fr 1fr;gap:12px;align-items:center;padding:11px 14px;border-top:1px solid #F4F0E8">
-              <span style="font-size:13.5px;font-weight:600;color:#101A2E">Cypress Freight Co</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6E7C93;background:#FBF8F2;border-radius:5px;padding:4px 8px;justify-self:start">Callback set</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6E7C93">1:04</span>
-              <span style="font-size:13px;color:#34405A">Disposition, notes</span>
-            </div>
-            <div style="display:grid;grid-template-columns:1.5fr .9fr .5fr 1fr;gap:12px;align-items:center;padding:11px 14px;border-top:1px solid #F4F0E8">
-              <span style="font-size:13.5px;font-weight:600;color:#101A2E">Meridian Home Care</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6E7C93;background:#FBF8F2;border-radius:5px;padding:4px 8px;justify-self:start">Not interested</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6E7C93">0:52</span>
-              <span style="font-size:13px;color:#34405A">Disposition, objection</span>
-            </div>
+            <sc-for list="{{ demoLines }}" as="l" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:40px 1fr;gap:12px;padding:10px 15px;border-top:1px solid #F4F0E8">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;color:{{ l.fg }};padding-top:2px">{{ l.at }}</span>
+                <span>
+                  <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:8.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:{{ l.fg }};margin-bottom:3px">{{ l.who }}</span>
+                  <span style="display:block;font-size:12.5px;line-height:1.5;color:#34405A">{{ l.text }}</span>
+                </span>
+              </div>
+            </sc-for>
+          </div>
+          </sc-if>
+
+          <sc-if value="{{ demoIsIntel }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px solid #E2DBCD;border-radius:10px;overflow:hidden">
+            <sc-for list="{{ demoObj }}" as="o" hint-placeholder-count="5">
+              <div style="padding:12px 15px;border-bottom:1px solid #F4F0E8">
+                <span style="display:flex;align-items:baseline;gap:10px">
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;color:#93A0BA">{{ o.no }}</span>
+                  <span style="font-size:13px;font-weight:600;color:#101A2E;flex:1;min-width:0">{{ o.label }}</span>
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#101A2E">{{ o.share }}</span>
+                </span>
+                <span style="display:block;margin-top:7px;height:4px;border-radius:99px;background:#F2ECE1;overflow:hidden"><span style="display:block;height:100%;border-radius:99px;background:#F5A614;width:{{ o.w }}"></span></span>
+              </div>
+            </sc-for>
+          </div>
+          </sc-if>
+
+          <div style="display:flex;align-items:center;gap:7px;margin-top:auto;padding-top:16px">
+            <sc-for list="{{ demoDots }}" as="d" hint-placeholder-count="4">
+              <i style="height:3px;border-radius:99px;transition:width .4s ease,background .4s ease;width:{{ d.w }};background:{{ d.bg }}"></i>
+            </sc-for>
+            <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#93A0BA">{{ demoStep }}</span>
           </div>
         </div>
       </div>
@@ -654,49 +647,39 @@
 
     <div style="display:grid;grid-template-columns:{{ twoCols }};gap:1px;background:#E2DBCD;border:1px solid #E2DBCD;border-radius:14px;overflow:hidden;margin-top:clamp(30px,4vw,44px)">
       <div style="background:#FFFFFF;padding:24px 26px 26px">
-        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">Beyond the pipeline</span>
-        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E">Objection intelligence</b>
-        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A">Why merchants say no, ranked and trending across thousands of calls. The same data our script tuning runs on, visible to you.</span>
+        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">In the console</span>
+        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E;text-wrap:balance">Hot leads, queued for a human</b>
+        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A;text-wrap:pretty">When a merchant asks for a person, the lead is tagged automatically and your broker gets a notification to call — with the merchant’s own words attached.</span>
       </div>
       <div style="background:#FFFFFF;padding:24px 26px 26px">
-        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">Beyond the pipeline</span>
-        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E">Call review and QA</b>
-        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A">Every recording and transcript in one place. Spot-check the agent, or hand a rep the call before they dial the merchant back.</span>
+        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">In the console</span>
+        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E;text-wrap:balance">Listen in, or take the call</b>
+        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A;text-wrap:pretty">Open a live call and watch the transcript stream. Whisper to the agent, join the line, or take the call over.</span>
       </div>
       <div style="background:#FFFFFF;padding:24px 26px 26px">
-        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">Beyond the pipeline</span>
-        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E">Market signal from your own book</b>
-        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A">What merchants are telling us about rates, stack shape, use of funds and timing — read across a whole pool instead of one rep's anecdote.</span>
+        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">In the console</span>
+        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E;text-wrap:balance">Intelligence from your own calls</b>
+        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A;text-wrap:pretty">Which objections keep coming up, which industries convert, and the hours merchants actually answer.</span>
       </div>
       <div style="background:#FFFFFF;padding:24px 26px 26px">
-        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">Beyond the pipeline</span>
-        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E">Controls in your hands</b>
-        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A">Pause a pool, tighten a cadence, cap attempts, revise a disclosure line. Policy changes take effect on the next dial, not the next release.</span>
+        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">In the console</span>
+        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E;text-wrap:balance">Upload, pause, export</b>
+        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A;text-wrap:pretty">Drop a file or pull from your CRM, see the cost before you commit, and pause a campaign any time.</span>
+      </div>
+      <div style="background:#FFFFFF;padding:24px 26px 26px">
+        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">Or skip it entirely</span>
+        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E;text-wrap:balance">Native CRM writes</b>
+        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A;text-wrap:pretty">Outcomes, transcripts and documents land on the original lead in Salesforce, HubSpot, or your own system — the moment they happen.</span>
+      </div>
+      <div style="background:#FFFFFF;padding:24px 26px 26px">
+        <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">Yours alone</span>
+        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;color:#101A2E;text-wrap:balance">Exportable, never pooled</b>
+        <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A;text-wrap:pretty">Every dial and outcome exports in full for diligence. Your calls tune your campaign alone.</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== HOW WE RUN IT ==================== -->
-<section id="howwerun" style="background:linear-gradient(180deg,rgba(251,248,242,1) 0%,rgba(251,248,242,0.985) 8%,rgba(251,248,242,0.95) 18%,rgba(251,248,242,0.89) 28%,rgba(251,248,242,0.8) 38%,rgba(251,248,242,0.68) 48%,rgba(251,248,242,0.55) 58%,rgba(251,248,242,0.41) 68%,rgba(251,248,242,0.28) 78%,rgba(251,248,242,0.17) 86%,rgba(251,248,242,0.08) 93%,rgba(251,248,242,0.03) 97%,rgba(251,248,242,0) 100%) top/100% 240px no-repeat, #F2ECE1;padding:clamp(120px,13vw,180px) 0 {{ secPadBase }};scroll-margin-top:70px;position:relative;overflow:hidden">
-  <div data-rv="{{ rv.howwerun }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
-    <div style="max-width:62ch;margin-bottom:clamp(36px,4vw,56px)">
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">Work in our console, or never open it at all.</h2>
-      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">Want a place to watch the calling live and manage lists? You have one. Want outcomes in your CRM and nothing else? Never log in. Either way your CRM stays the system of record, and everything is exportable on demand.</p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:{{ twoCols }};gap:1px;background:#E2DBCD;border:1px solid #E2DBCD;border-radius:14px;overflow:hidden">
-      <sc-for list="{{ infra }}" as="i" hint-placeholder-count="6">
-        <div style="background:#FFFFFF;padding:24px 26px 26px;transition:background .25s" style-hover="background:#FBF8F2">
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:10px">{{ i.tag }}</span>
-          <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.016em;line-height:1.18;color:#101A2E">{{ i.t }}</b>
-          <span style="display:block;margin-top:8px;font-size:14.5px;line-height:1.55;color:#34405A">{{ i.d }}</span>
-        </div>
-      </sc-for>
-    </div>
-
-  </div>
-</section>
 
 
 
@@ -710,15 +693,15 @@
 <section id="pricing" style="padding:{{ secPad }};scroll-margin-top:70px;position:relative;overflow:hidden">
   <div data-rv="{{ rv.pricing }}" style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
     <div style="max-width:62ch;margin-bottom:clamp(36px,4vw,56px)">
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">One fixed cost per lead. No meter, no revenue share.</h2>
-      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">You hand us your leads and pay one fixed unit price per lead, charged at upload. Usage models charge more when leads are hard to reach. Ours doesn't move.</p>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03"><span style="color:#1F3BE0;box-shadow:inset 0 -.09em 0 #F5A614">One fixed cost per lead.</span><br>No usage meter.<br>No revenue share.</h2>
+      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">A lead is charged once, the moment it is uploaded — before any work is done. Usage models charge more when leads are hard to reach. Ours doesn't move.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:{{ priceCols }};gap:1px;background:#E2DBCD;border:1px solid #E2DBCD;border-radius:14px;overflow:hidden">
       <div style="background:#FFFFFF;padding:36px 34px 38px;display:flex;flex-direction:column">
         <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#1F3BE0;font-weight:700">The model</span>
         <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;margin:14px 0 12px;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;line-height:1.1">Fixed price, per lead uploaded</h3>
-        <p style="font-size:15.5px;color:#34405A;line-height:1.6;max-width:52ch">You know the exact spend before a single call is placed. The number never moves with volume, call length, or outcome.</p>
+        <p style="font-size:15.5px;color:#34405A;line-height:1.6;max-width:52ch">You know the exact spend before a single call is placed. The number never moves with volume, call length, or outcome — and one unit buys the lead a full working cycle, not one dial.</p>
         <div style="margin-top:26px;padding-top:24px;border-top:1px solid #E2DBCD;display:flex;align-items:center;flex-wrap:wrap;gap:12px">
           <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#6E7C93;background:#FBF8F2;border:1px solid #E2DBCD;border-radius:7px;padding:9px 13px">Leads uploaded</span>
           <em style="font-style:normal;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px;color:#101A2E">×</em>
@@ -728,7 +711,7 @@
         </div>
       </div>
       <div style="background:#101A2E;padding:36px 32px 38px;color:#FBF8F2">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#F5A614;font-weight:700">What it never includes</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#F5A614;font-weight:700">What it does not include</span>
         <ul style="list-style:none;margin:16px 0 0;padding:0;display:grid;gap:16px">
           <sc-for list="{{ nolist }}" as="n" hint-placeholder-count="4">
             <li style="font-size:14.5px;color:#B9C3D6;line-height:1.5;padding-left:24px;position:relative"><span style="position:absolute;left:0;top:0;font-family:'JetBrains Mono',monospace;font-weight:700;color:#D9542B">✕</span><b style="color:#FBF8F2;font-weight:600">{{ n.b }}</b> {{ n.d }}</li>
@@ -737,37 +720,12 @@
       </div>
     </div>
 
-  </div>
-</section>
 
-<!-- ==================== BILLING DEFINITION ==================== -->
-<section id="counting" style="background:linear-gradient(180deg,rgba(251,248,242,1) 0%,rgba(251,248,242,0.985) 8%,rgba(251,248,242,0.95) 18%,rgba(251,248,242,0.89) 28%,rgba(251,248,242,0.8) 38%,rgba(251,248,242,0.68) 48%,rgba(251,248,242,0.55) 58%,rgba(251,248,242,0.41) 68%,rgba(251,248,242,0.28) 78%,rgba(251,248,242,0.17) 86%,rgba(251,248,242,0.08) 93%,rgba(251,248,242,0.03) 97%,rgba(251,248,242,0) 100%) top/100% 240px no-repeat, #F2ECE1;padding:clamp(120px,13vw,180px) 0 {{ secPadBase }};scroll-margin-top:70px;position:relative;overflow:hidden">
-  <div style="max-width:1220px;margin:0 auto;padding:{{ wrapPad }};position:relative;z-index:1">
-    <div style="max-width:62ch;margin-bottom:clamp(32px,4vw,48px)">
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,55px);letter-spacing:-.024em;line-height:1.03">What you are charged for, and when.</h2>
-      <p style="margin-top:18px;font-size:clamp(17px,1.55vw,21px);line-height:1.55;color:#34405A">One price per lead, charged when the lead arrives — and a defined body of work that follows it.</p>
-    </div>
-
-    <div style="background:#FFFFFF;border:1px solid #E2DBCD;border-radius:14px;padding:28px 30px 30px;margin-bottom:clamp(26px,3vw,36px)">
-      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8A6410;margin-bottom:14px">When you are charged</span>
-      <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.5;color:#101A2E;max-width:60ch;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.018em">A lead is charged the moment it is uploaded — one fixed price, up front, before any work is done.</p>
-      <p style="margin-top:14px;font-size:15px;line-height:1.6;color:#34405A;max-width:70ch">In exchange the record gets a full working cycle and everything it produces.</p>
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#34405A;background:#FBF8F2;border:1px solid #E2DBCD;border-radius:7px;padding:8px 12px">Lead uploaded</span>
-        <span style="color:#F5A614;font-weight:700">&rarr;</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F5A614;background:#101A2E;border:1px solid #101A2E;border-radius:7px;padding:8px 12px">Charged once</span>
-        <span style="color:#F5A614;font-weight:700">&rarr;</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#34405A;background:#FBF8F2;border:1px solid #E2DBCD;border-radius:7px;padding:8px 12px">Cadences and cooldowns</span>
-        <span style="color:#F5A614;font-weight:700">&rarr;</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#34405A;background:#FBF8F2;border:1px solid #E2DBCD;border-radius:7px;padding:8px 12px">Terminal state</span>
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:{{ twoCols }};gap:1px;background:#E2DBCD;border:1px solid #E2DBCD;border-radius:14px;overflow:hidden">
+    <div style="display:grid;grid-template-columns:{{ twoCols }};gap:1px;background:#E2DBCD;border:1px solid #E2DBCD;border-radius:14px;overflow:hidden;margin-top:clamp(26px,3vw,36px)">
       <div style="background:#FFFFFF;padding:22px 24px 24px">
         <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F3BE0;margin-bottom:9px">Your side</span>
         <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.016em;line-height:1.18;color:#101A2E">Send leads you know are clean</b>
-        <span style="display:block;margin-top:7px;font-size:14.5px;line-height:1.55;color:#34405A">Billing happens at upload, so screening matters. Send records you can stand behind on consent — one that can't be legally dialed still consumed its unit.</span>
+        <span style="display:block;margin-top:7px;font-size:14.5px;line-height:1.55;color:#34405A">Billing happens at upload, so screening matters. Send pre-scrubbed leads you can stand behind on consent — anything that fails our scrub is never dialed, but it still consumed its unit.</span>
       </div>
       <div style="background:#FFFFFF;padding:22px 24px 24px">
         <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:9px">Our side</span>
@@ -776,18 +734,19 @@
       </div>
       <div style="background:#FFFFFF;padding:22px 24px 24px">
         <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6410;margin-bottom:9px">At the end</span>
-        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.016em;line-height:1.18;color:#101A2E">The record goes terminal</b>
+        <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.016em;line-height:1.18;color:#101A2E">The lead goes terminal</b>
         <span style="display:block;margin-top:7px;font-size:14.5px;line-height:1.55;color:#34405A">When the cycle completes, the lead closes out. No trickle of extra charges, no open-ended meter.</span>
       </div>
       <div style="background:#FFFFFF;padding:22px 24px 24px">
         <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#00654E;margin-bottom:9px">If you want it again</span>
         <b style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.016em;line-height:1.18;color:#101A2E">Same price, same full output</b>
-        <span style="display:block;margin-top:7px;font-size:14.5px;line-height:1.55;color:#34405A">Re-upload a terminal record: same fixed price, same complete working cycle and package.</span>
+        <span style="display:block;margin-top:7px;font-size:14.5px;line-height:1.55;color:#34405A">Re-upload a terminal lead: same fixed price, same complete working cycle and package.</span>
       </div>
     </div>
 
   </div>
 </section>
+
 
 
 </div>
@@ -1075,7 +1034,7 @@
   <div style="position:absolute;left:0;right:0;top:0;height:130px;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(238,214,163,0) 0%,rgba(238,214,163,0.05) 16%,rgba(240,197,121,0.1) 32%,rgba(240,197,121,0.12) 48%,rgba(240,197,121,0.1) 62%,rgba(240,197,121,0.06) 76%,rgba(240,197,121,0.025) 88%,rgba(240,197,121,0) 100%), linear-gradient(180deg,rgba(242,236,225,1) 0%,rgba(242,236,225,0.98) 6%,rgba(242,236,225,0.94) 13%,rgba(242,236,225,0.87) 21%,rgba(242,236,225,0.78) 30%,rgba(242,236,225,0.67) 39%,rgba(242,236,225,0.55) 48%,rgba(242,236,225,0.43) 57%,rgba(242,236,225,0.32) 66%,rgba(242,236,225,0.22) 75%,rgba(242,236,225,0.14) 83%,rgba(242,236,225,0.08) 90%,rgba(242,236,225,0.035) 95%,rgba(242,236,225,0) 100%)" aria-hidden="true"></div>
   <div style="position:relative;z-index:1;max-width:1220px;margin:0 auto;padding:{{ wrapPad }};display:grid;grid-template-columns:{{ finalCols }};gap:{{ gapLg }};align-items:center">
     <div>
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(34px,5vw,64px);letter-spacing:-.035em;line-height:1.04">Send us the files that need attention.</h2>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(34px,5vw,64px);letter-spacing:-.035em;line-height:1.04">You send the leads.<br>We do the gritty work.</h2>
       <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
         <a href="https://calendar.app.google/3RGeXGeboEWwX4XZ9" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#101A2E;color:#FBF8F2;font-weight:600;font-size:15px;padding:14px 22px;border-radius:8px" style-hover="color:#FBF8F2;transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(16,26,46,.75)">Book an intro call <span>→</span></a>
         <a href="mailto:hello@leadrefinery.ai" style="display:inline-flex;align-items:center;gap:10px;background:#F5A614;color:#101A2E;border:1px solid #F5A614;font-weight:600;font-size:15px;padding:14px 22px;border-radius:8px" style-hover="background:#E09708;border-color:#E09708;color:#101A2E;transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(245,166,20,.9)">Email us a question</a>
@@ -1112,7 +1071,7 @@
           </svg>
           <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.03em;color:#FBF8F2">LeadRefinery</span>
         </a>
-        <p style="font-size:14.5px;max-width:34ch;margin-top:14px;line-height:1.6">The revenue engine for business lending. Purpose-built voice agents, run behind a compliance gate. LeadRefinery LLC, Florida.</p>
+        <p style="font-size:14.5px;max-width:34ch;margin-top:14px;line-height:1.6">The revenue engine for business lending. Purpose-built voice agents. LeadRefinery LLC, Florida.</p>
       </div>
       <div>
         <h4 style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#FBF8F2;font-weight:700;margin-bottom:16px">Platform</h4>
@@ -1121,7 +1080,6 @@
           <li><a href="#" onClick="{{ fx.engine }}" style="font-size:14.5px;color:#93A0BA" style-hover="color:#F5A614">The revenue engine</a></li>
           <li><a href="#" onClick="{{ fx.agents }}" style="font-size:14.5px;color:#93A0BA" style-hover="color:#F5A614">Agent roster</a></li>
           <li><a href="#" onClick="{{ fx.pkg }}" style="font-size:14.5px;color:#93A0BA" style-hover="color:#F5A614">The package</a></li>
-          <li><a href="#" onClick="{{ fx.compare }}" style="font-size:14.5px;color:#93A0BA" style-hover="color:#F5A614">Compare</a></li>
         </ul>
       </div>
       <div>
@@ -1139,7 +1097,6 @@
           <li><a href="https://calendar.app.google/3RGeXGeboEWwX4XZ9" target="_blank" rel="noopener" style="font-size:14.5px;color:#93A0BA" style-hover="color:#F5A614">Book an intro call</a></li>
           <li><a href="mailto:hello@leadrefinery.ai" style="font-size:14.5px;color:#93A0BA" style-hover="color:#F5A614">Contact</a></li>
           <li><a href="#" onClick="{{ fx.pricing }}" style="font-size:14.5px;color:#93A0BA" style-hover="color:#F5A614">Pricing model</a></li>
-          <li><a href="#" onClick="{{ fx.counting }}" style="font-size:14.5px;color:#93A0BA" style-hover="color:#F5A614">What you are charged for</a></li>
         </ul>
       </div>
     </div>
@@ -1152,6 +1109,8 @@
   </div>
 </footer>
 
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#101A2E"></rect><g fill="#FBF8F2"><rect x="32" y="42" width="6" height="16" rx="3"></rect><rect x="42" y="36" width="6" height="28" rx="3"></rect><rect x="52" y="44" width="6" height="12" rx="3"></rect></g><rect x="62" y="30" width="6" height="40" rx="3" fill="#F5A614"></rect></svg></template>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;demoSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:3,&quot;step&quot;:0.5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Demos&quot;,&quot;unit&quot;:&quot;×&quot;}}">
 const POOLS = [
@@ -1195,9 +1154,7 @@ const THREADS = [
   { id:'agents',     from:'r', fa:.65, to:'l', fb:.40, cross:true,  tone:'light' },
   { id:'pipeline',   from:'l', fa:.40, to:'r', fb:.55, cross:true,  tone:'light' },
   { id:'package',    from:'r', fa:.55, to:'l', fb:.50, cross:true,  tone:'light' },
-  { id:'compare',    from:'l', fa:.50, to:'r', fb:.45, cross:true,  tone:'light' },
-  { id:'compliance', from:'r', fa:.45, to:'l', fb:.60, cross:true,  tone:'dark'  },
-  { id:'howwerun',   from:'l', fa:.60, to:'l', fb:.40, cross:false, tone:'light' },
+  { id:'compliance', from:'l', fa:.50, to:'l', fb:.60, cross:true,  tone:'dark'  },
   { id:'pricing',    from:'l', fa:.40, to:'r', fb:.50, cross:true,  tone:'light' },
   { id:'book',       from:'r', fa:.50, to:'r', fb:.50, cross:false, tone:'amber' }
 ];
@@ -1238,7 +1195,28 @@ const RUNTIME = [
     v:'Performance improves with volume instead of decaying — and the data compounds into a moat a licensed API cannot replicate.' }
 ];
 
-const REVEALS = ['problem','agents','runtime','pipeline','package','compare','compliance','howwerun','pricing'];
+const REVEALS = ['problem','agents','runtime','pipeline','package','compliance','pricing'];
+
+const DEMO_NAV = [
+  { key:'dash',  label:'Dashboard' },
+  { key:'live',  label:'Live activity' },
+  { key:'hot',   label:'Hot leads', badge:'14' },
+  { key:'out',   label:'Outcomes' },
+  { key:'camp',  label:'Campaigns' },
+  { key:'intel', label:'Intelligence' },
+  { key:'comp',  label:'Compliance log' }
+];
+
+const DEMO_SCREENS = [
+  { key:'dash', nav:'dash', title:'Dashboard', meta:'Last 30 days', pill:'Running',
+    pillTone:['rgba(0,165,126,.12)','#00654E','rgba(0,165,126,.45)'] },
+  { key:'hot', nav:'hot', title:'Hot leads · awaiting a broker', meta:'14 waiting', pill:'Needs a human',
+    pillTone:['rgba(245,166,20,.16)','#8A6410','rgba(245,166,20,.5)'] },
+  { key:'live', nav:'live', title:'Live activity', meta:'184 calls in progress', pill:'Live',
+    pillTone:['rgba(0,165,126,.12)','#00654E','rgba(0,165,126,.45)'] },
+  { key:'intel', nav:'intel', title:'Intelligence · recurring objections', meta:'444,576 calls', pill:'Your book',
+    pillTone:['rgba(31,59,224,.10)','#1F3BE0','rgba(31,59,224,.35)'] }
+];
 
 const PAGES = [
   { id:'home',       label:'Home',       desc:'The premise, the agents, the package, a real call' },
@@ -1314,8 +1292,14 @@ class Component extends DCLogic {
     menu: false,
     dims: {},
     revealed: {},
-    layer: 0
+    layer: 0,
+    demo: 0
   };
+
+  _startDemo() {
+    if (this._demoT) return;
+    this._demoT = setInterval(() => this.setState(s => ({ demo: (s.demo || 0) + 1 })), 3600);
+  }
 
   _startBreath() {
     if (this._brRaf) return;
@@ -1656,8 +1640,11 @@ class Component extends DCLogic {
     const t = Math.min(this.callT || 0, 252);
     const vw = this.state.vw, md = vw <= 1040, sm = vw <= 760;
     const p = this.state.page;
+    const demoIdx = (this.state.demo || 0) % DEMO_SCREENS.length;
+    const demo = DEMO_SCREENS[demoIdx];
 
     this._startBreath();
+    this._startDemo();
     return {
       prog: (this.state.scrolled * 100) + '%',
       navBorder: this.state.scrolled > 0.005 ? '#E2DBCD' : 'transparent',
@@ -1689,8 +1676,7 @@ class Component extends DCLogic {
         system: this.navSection('compliance', 'runtime'),
         console: this.navSection('compliance', 'console'),
         integrations: this.navSection('compliance', 'howwerun'),
-        pricing: this.navSection('pricing', 'pricing'),
-        counting: this.navSection('pricing', 'counting')
+        pricing: this.navSection('pricing', 'pricing')
       },
       ddOpen: !!this.state.dd,
       ddKicker: 'Page',
@@ -1782,6 +1768,64 @@ class Component extends DCLogic {
       spineCols: '1fr 34px 1fr',
       consoleCols: sm ? '1fr' : '172px 1fr',
       tileCols: sm ? 'repeat(2,1fr)' : 'repeat(4,1fr)',
+      hotCols: sm ? '1fr' : '1fr 1.3fr auto',
+
+      demoNav: DEMO_NAV.map(n => ({
+        label: n.label,
+        badge: n.badge || '',
+        badgeShow: n.badge ? 'block' : 'none',
+        bg: n.key === demo.nav ? 'rgba(255,255,255,.10)' : 'transparent',
+        fg: n.key === demo.nav ? '#FBF8F2' : '#93A0BA'
+      })),
+      demoTitle: demo.title,
+      demoMeta: demo.meta,
+      demoPill: demo.pill,
+      demoPillBg: demo.pillTone[0],
+      demoPillFg: demo.pillTone[1],
+      demoPillBd: demo.pillTone[2],
+      demoIsDash: demo.key === 'dash',
+      demoIsHot: demo.key === 'hot',
+      demoIsLive: demo.key === 'live',
+      demoIsIntel: demo.key === 'intel',
+      demoStep: (demoIdx + 1) + ' / ' + DEMO_SCREENS.length,
+      demoDots: DEMO_SCREENS.map((x, i) => ({
+        w: i === demoIdx ? '30px' : '12px',
+        bg: i === demoIdx ? '#F5A614' : '#E2DBCD'
+      })),
+
+      demoTiles: [
+        { k:'Leads uploaded', v:'62,480', fg:'#101A2E' },
+        { k:'Connect rate', v:'34.6%', fg:'#101A2E' },
+        { k:'Applications out', v:'2,212', fg:'#8A6410' },
+        { k:'Live transfers', v:'1,702', fg:'#00654E' }
+      ],
+      demoBars: [38,44,41,52,49,58,55,61,57,66,62,71,68,74].map((t, i) => {
+        const a = [52,58,55,64,61,72,68,76,71,82,78,88,84,92][i];
+        return { t: t + '%', a: (a - t) + '%' };
+      }),
+
+      demoHot: [
+        { name:'Ironwood Cabinetry', meta:'Grand Rapids, MI · $168K/mo', quote:'"I\\u2019d rather go over the numbers with an actual person."', heat:'HOT', heatFg:'#B33F1C' },
+        { name:'Rio Grande Produce', meta:'El Paso, TX · $244K/mo', quote:'"What\\u2019s the factor rate? I need a real answer."', heat:'HOT', heatFg:'#B33F1C' },
+        { name:'Half Moon Brewing', meta:'Petaluma, CA · $132K/mo', quote:'"Have somebody call me about the payback."', heat:'WARM', heatFg:'#8A6410' },
+        { name:'Beacon Hill Barbers', meta:'Boston, MA · $47K/mo', quote:'"My partner handles financing \\u2014 call back Thursday."', heat:'WARM', heatFg:'#8A6410' }
+      ],
+      demoWave: new Array(26).fill(0).map((x, i) => ({
+        h: (5 + Math.round(Math.abs(Math.sin((i + demoIdx * 3) * 0.8)) * 14)) + 'px'
+      })),
+      demoLines: [
+        { at:'0:41', who:'Agent', fg:'#8A6410', text:'And are you carrying any advances right now?' },
+        { at:'0:45', who:'Merchant', fg:'#1F3BE0', text:'One. Should be paid off in about six weeks.' },
+        { at:'0:50', who:'Agent', fg:'#8A6410', text:'What would you be putting the funds toward?' },
+        { at:'0:55', who:'Merchant', fg:'#1F3BE0', text:'Another truck, and probably a driver with it.' }
+      ],
+      demoObj: [
+        { no:'01', label:'"Rate is too high"', share:'23.4%', w:'100%' },
+        { no:'02', label:'"Already have a position"', share:'18.9%', w:'81%' },
+        { no:'03', label:'"Not the decision maker"', share:'12.2%', w:'52%' },
+        { no:'04', label:'"Send me something in writing"', share:'9.6%', w:'41%' },
+        { no:'05', label:'"Revenue is down this quarter"', share:'6.4%', w:'27%' }
+      ],
       stepsGrid: sm ? 'grid' : 'none',
       twoCols: sm ? '1fr' : 'repeat(2,1fr)',
       riskDivider: sm ? 'none' : '1px solid #E2DBCD',
@@ -1804,7 +1848,7 @@ class Component extends DCLogic {
         const list = ['MCA funders','Equipment lessors','SBA lenders','Working-capital providers','Line-of-credit lenders','Broker shops','Revenue-based finance'];
         return list.concat(list).map(v => ({ v }));
       })(),
-      heroSwap: ['submissions', 'live transfers', 'applications'][this.state.heroWord % 3],
+      heroSwap: ['submissions', 'live transfers', 'applications', 'qualified merchants'][this.state.heroWord % 4],
       agentName: pool.agent,
       reach: pool.reach,
       total: pool.total,
@@ -1950,10 +1994,10 @@ class Component extends DCLogic {
         { t:'Spoken AI disclosure', d:'The agent says what it is inside the first ten seconds of every call, in your approved language. Never buried, never skipped.' },
         { t:'Scrubs re-run at re-entry', d:'Federal and state DNC, reassigned numbers, litigator and line-type — refreshed every time a record re-enters the cadence, not once at upload.' },
         { t:'Calling windows enforced', d:"Held to the borrower's own time zone, with per-campaign retry caps so nothing is worked harder than your policy allows." },
-        { t:'Machines terminate', d:'Answering machine detection ends the call. No synthetic-voice message is left, on any campaign.' },
+        { t:'Machines terminate', d:'Answering machine detection ends the call. No synthetic-voice message is left on any campaign.' },
         { t:'Opt-out honored on the call', d:'Captured mid-conversation, written back immediately, and enforced across every agent and every future campaign.' },
         { t:'Your numbers, attested to you', d:'Numbers provisioned per client and attested at the highest level, so your brand shows on the handset instead of a pooled carrier label.' },
-        { t:'Disposition receipt on every dial', d:'What was called, when, under what consent, and how it ended — reconcilable end to end rather than reconstructed after the fact.' }
+        { t:'A receipt on every dial', d:'What was called, when, under what consent, and how it ended — reconcilable end to end rather than reconstructed after the fact.' }
       ],
       marquee: (() => {
         const items = ['TCPA','Prior express written consent','Federal + state DNC','STIR/SHAKEN A-attestation','Per-tenant DIDs','Reassigned Numbers Database','Litigator scrub','Line-type check','10DLC registration','Calling-window enforcement','Frequency caps','Thoughtful cadence','No weekends','Disposition receipt on every dial'];

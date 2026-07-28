@@ -63,5 +63,7 @@ and push it — one step, nothing to remember.
 
 ## What mobile.css currently handles (≤760px)
 - Hero headline shrinks so the call-to-action sits above the fold
-- The 4-column comparison table becomes stacked per-row cards (no sideways swipe)
-- The console disposition table collapses from 4 cramped columns to a clean 2×2
+
+(The current design is otherwise responsive on its own. Earlier mobile fixes
+for the comparison table and console were removed because the design changed —
+the comparison section is gone and the console is now natively responsive.)
